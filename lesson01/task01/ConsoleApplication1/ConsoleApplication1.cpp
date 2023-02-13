@@ -67,6 +67,8 @@ int main()
         out << array_one[i] << " ";
     }
     out.close();
+    delete[] array_one;
+    delete[] array_two;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
