@@ -9,21 +9,23 @@ struct city
     std::string name;
     std::string street;
     int building;
+    int apt;
     int postcode;
 };
 
 void print_data(city x)
 {
-    std::cout << "the city`s name " << x.name << "\n";
-    std::cout << "street " << x.street << "\n";
-    std::cout << "street " << x.building << "\n";
-    std::cout << "postcode " << x.postcode << "\n";
+    std::cout << "the city`s name: " << x.name << "\n";
+    std::cout << "street: " << x.street << "\n";
+    std::cout << "building: " << x.building << "\n";
+    std::cout << "apt: " << x.apt << "\n";
+    std::cout << "postcode: " << x.postcode << "\n\n";
 }
 
 int main()
 {
-    city urengoy{ "New Urengoy", "Moskowskaya st",20,629300 };
-    city kogalym{ "Kogalym","Mira",12,628481 };
+    city urengoy{ "New Urengoy", "Moskowskaya st",20,11,629300 };
+    city kogalym{ "Kogalym","Mira",12,5,628481 };
     print_data (urengoy );
     print_data(kogalym);
     }
