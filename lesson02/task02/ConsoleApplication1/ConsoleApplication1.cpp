@@ -18,7 +18,7 @@ void change_balance(account& b,int x)
 int main()
 {
     account x;
-    std::cout << "Enter user data\n";
+    std::cout << "Enter user data:\n";
     std::cout << "Account number\n";
     std::cin >> x.number;
     std::cout << "Name\n";
