@@ -27,37 +27,22 @@ int main()
     {
         std::cout << "Enter  month number, use zero to exit" << "\n";
         std::cin >> input_val;
-        if (input_val>12) 
+        months user_month = static_cast<months>(input_val);
+        switch(user_month)
         {
-            std::cout << "Wrong number !!!!!" << "\n";
-            continue;
-        }
-        switch(input_val)
-        {
- case static_cast<int>(months::January):
-     std::cout << "January\n"; break;
- case static_cast<int>(months::February):
-     std::cout << "February\n"; break;
- case static_cast<int>(months::March):
-     std::cout << "March\n"; break;
- case static_cast<int>(months::April):
-     std::cout << "April\n"; break;
- case static_cast<int>(months::May):
-     std::cout << "May\n"; break;
- case static_cast<int>(months::June):
-     std::cout << "June\n"; break;
- case static_cast<int>(months::July):
-     std::cout << "July\n"; break;
- case static_cast<int>(months::August):
-     std::cout << "August\n"; break;
- case static_cast<int>(months::September):
-     std::cout << "September\n"; break;
- case static_cast<int>(months::October):
-     std::cout << "October\n"; break;
- case static_cast<int>(months::November):
-     std::cout << "November\n"; break;
- case static_cast<int>(months::December):
-     std::cout << "December\n"; break;
+ case months::January:  std::cout << "January\n"; break;
+ case months::February: std::cout << "February\n"; break;
+ case months::March:    std::cout << "March\n"; break;
+ case months::April:    std::cout << "April\n"; break;
+ case months::May:      std::cout << "May\n"; break;
+ case months::June:     std::cout << "June\n"; break;
+ case months::July:     std::cout << "July\n"; break;
+ case months::August:   std::cout << "August\n"; break;
+ case months::September:std::cout << "September\n"; break;
+ case months::October:  std::cout << "October\n"; break;
+ case months::November: std::cout << "November\n"; break;
+ case months::December: std::cout << "December\n"; break;
+ default: std::cout << "Wrong number !!!!!" << "\n"; continue;
              }
     }
 
