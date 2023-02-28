@@ -49,7 +49,7 @@ int main()
     }
     int size;
     in >> size;
-    Address** array=new Address *[4];
+    Address* array=new Address [size];
     for (int i = 0; i < size; i++)
     {
         std::string a, b;
@@ -58,19 +58,21 @@ int main()
         in >> b;
         in >> c;
         in >> d;
-        array[i] = new Address(a, b, c, d);
+        array[i] =  Address(a, b, c, d);
     }
     in.close();
     for (int i=0;i<size;i++)
-    std::cout << array[i]->get_address();
+    std::cout << array[i].get_address();
     std::fstream out;
     out.open("out.txt", std::ios::out);
     out << size << "\n";
     for (int i = size - 1; i >= 0; i--) {
-        out << array[i]->get_address_for_out();
-        std::cout << array[i]->get_address_for_out();
+        out << array[i].get_address_for_out();
+        std::cout << array[i].get_address_for_out();
     }
-
+    delete[] array;
+    array = nullptr;
+    out.close();
     return 0;
 }
 
