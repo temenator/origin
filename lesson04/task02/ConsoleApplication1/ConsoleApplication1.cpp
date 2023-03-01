@@ -79,7 +79,7 @@ int main()
     in >> size;
     std::cout << size << "\n";
     Address* array = new Address  [size];
-    int* sort = new int (size);
+    int* sort = new int [size];
     for (int i = 0; i < size; i++)
     {
         std::string a, b;
