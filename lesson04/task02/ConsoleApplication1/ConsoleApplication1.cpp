@@ -88,7 +88,7 @@ int main()
         in >> b;
         in >> c;
         in >> d;
-        array[i] =  Address(a, b, c, d);
+        array[i] =  Address(in, in, in, in);
         sort[i] = i;
        
         std::cout << array[i].get_address();
